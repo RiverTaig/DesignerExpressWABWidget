@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+		<title>ArcGIS Web Application</title>
+		<link rel="shortcut icon" href="images/shortcut.png">
+		<!--[if IE 8]>
+    <link rel="stylesheet" type="text/css"  href="jimu.js/css/jimu-ie.css" />
+    <![endif]-->
+		<style type="text/css">
+		#popupTableName{
+			background-color: #cdcdcd
+		}
+		#popupPrice{
+			color: #C4014B
+		}
+
+		*{box-sizing: border-box;}
+		body,html {
+			width:100%;
+			height:100%;
+			margin:0;
+			padding:0;
+			overflow:hidden;
+		}
+		#main-loading{
+			width: 100%;
+			height: 100%;
+			background-color: #518dca;
+			text-align: center;
+			overflow: hidden;
+		}
+		#main-loading #app-loading, #main-loading #ie-note{
+		    position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    left: 0;
+		    right: 0;
+		    margin: auto;
+	  	}
+		#main-loading #app-loading{
+			width: 100%;
+			height: 100px;
+		}
+		#main-loading .app-name{
+			font: 36px arial;
+			font-weight: bold;
+			position: absolute;
+			z-index: 2;
+		}
+		#main-loading img{
+			position: relative;
+			display: block;
+			margin: auto;
+		}
+		#main-loading .loading-info{
+			font: 14px 'arial';
+			margin-top: 50px;
+			overflow: hidden;
+			position: relative;
+		}
+		#main-loading .loading-info .loading{
+			width: 260px;
+			height: 4px;
+			border-radius: 2px;
+			background-color: #31659b;
+			margin: auto;
+		}
+		#main-loading .loading-info .loading-progress{
+			height: 4px;
+			border-radius: 2px;
+			background-color: white;
+		}
+		#main-loading #ie-note {
+	        width: 586px;
+	        height: 253px;
+	        background-image: url('images/notes.png');
+	        padding: 0 30px 40px 30px;
+	        font-size: 14px;
+	        color: #596679;
+	      }
+		#ie-note .hint-title{
+			height: 40px;
+			line-height: 48px;
+			text-align: left;
+			font-weight: bold;
+		}
+		#ie-note .hint-img{
+			background-image: url('images/hint.png');
+			background-position: left;
+			padding-left: 40px;
+			margin-top: 20px;
+			background-repeat: no-repeat;
+			height: 30px;
+			text-align: left;
+			line-height: 30px;
+			font-weight: bold;
+		}
+		#ie-note span{
+			display: block;
+			line-height: 14px;
+		}
+		#main-page{
+			display: none;
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+		#jimu-layout-manager{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+
+		.jimu-main-bgcolor {
+			background-color: #009B3E;
+		}
+	
+		</style>
+		<script>
+			/*******************************
+			* This is the function you can modify to customize the loading page
+			* This function will be invoked when one resource is loaded.
+			********************************/
+			var progress;
+			function loadingCallback(url, i, count) {
+				var loading = document.getElementById('main-loading-bar');
+				loading.setAttribute('title', url);
+			  if(!progress){
+			    progress = document.createElement('div');
+			    progress.setAttribute('class', 'loading-progress');
+			    loading.appendChild(progress);
+			  }
+			  progress.style.width = (((i - 1)/count) * 100) + '%';
+			}
+		</script>
+		
+	<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css" />
+	<link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>-->
+	<!--<script type="text/javascript" src="https://code.jquery.com/jquery-git1.min.js"></script>-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+	<!--<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>-->
+	<script src="DesignerExpress.js"></script>
+	<link rel="stylesheet" type="text/css"  href="css/ESRIOverride.css">
+
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="/webappbuilder/apps/4/FancyBox/source/jquery.fancybox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="/webappbuilder/apps/4/FancyBox/source/jquery.fancybox.pack.js"></script>
+
+	<!-- Optionally add helpers - button, thumbnail and/or media -->
+	<link rel="stylesheet" href="/webappbuilder/apps/4/FancyBox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="/webappbuilder/apps/4/FancyBox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	<script type="text/javascript" src="/webappbuilder/apps/4/FancyBox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+	<link rel="stylesheet" href="/webappbuilder/apps/4/FancyBox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+	<script type="text/javascript" src="/webappbuilder/apps/4/FancyBox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>		
+	</head>
+	<body class="claro">
+
+	<div id="popupdiv1" title="Basic modal dialog" style="display: none" >
+		<h2 style="background-color:#2FB4E9;text-align: center" id="banner">Compatible Unit Library</h2>
+		<table id="example">
+		  <thead>
+		    <tr><th class="code">Code</th><th>Description </th><th>Material Price</th><th>Units</th></tr>
+		  </thead>
+		  <tbody>
+		  </tbody>
+		</table>
+
+		<br><br>
+		<!--<span>DEBUGGING ONLY...THIS WILL GO AWAY...Enter URL to Express Service</span><input id="ExpressURL" type="text" value="http://63.253.242.156/arcgis/rest/services/ElectricExpress" />-->
+		<h2 style="background-color:#2FB4E9;text-align: center">Current Design </h2>
+		<div id="dxFeatureList"  >
+			<ul id="FeatureList" class="LinkedList">
+			  <li ondrop="drop(event)" ondragover="allowDrop(event)">Feature 1
+			    <ul id="feature1"></ul>
+			  </li>
+			  <li ondrop="drop(event)" ondragover="allowDrop(event)">Feature 2
+			    <ul id="feature2"></ul>
+			  </li>
+			  <li ondrop="drop(event)" ondragover="allowDrop(event)">Feature 3
+			    <ul id="feature3"></ul>
+			  </li>
+			  <li ondrop="drop(event)" ondragover="allowDrop(event)">Feature 4
+			    <ul id="feature4"></ul>
+			  </li>    
+			  
+			</ul>
+		</div>
+		<span id="TotalPrice1" style="margin-left: 50px;font-size: 18px;font-weight:bold;color:#aaaaaa ">Total Price:<div id="TotalPrice" style="font-size: 18px;font-weight:bold;color:#000000;display:inline"> $0.00 </div></span>
+		<div id="DesignJson" style="display: none" width="300px" height="200px">this is where the json goes</div>
+		<br>
+		<input class="CostItemLibraryButtonLeft" type="button" id="btnExportShoppingList" value="Export Material List" />
+		<input class="CostItemLibraryButtonLeft"type="button" id="btnSendDesign" onclick="SendWebDesignToEnterprise()" value="Submit for Approval" />
+		<input class="CostItemLibraryButtonRight" type="button" style="margin-left:150px" id="btnFade"  onclick="Fade(true)" value="Fade" />
+		<input class="CostItemLibraryButtonRight" type="button" id="btnZoomToDesign" onclick="ZoomToDesign()" value="Zoom To Design" />
+	</div>
+
+	<div id="popupdiv2" title="Basic modal dialog" style="display: none">
+		<table >
+			<tr>
+			  <td id="popupTableName">CODE</TD>
+			  <td id="popupCode">Code Value</td>
+			</tr>
+			<tr>
+			  <td id="popupTableName">DESCRIPTION</TD>
+			  <td id="popupDescription">Description Value</td>
+			</tr> 
+			<tr>
+			  <td id="popupTableName">UNITS</TD>
+			  <td id="popupUnits">Each</td>
+			</tr>     
+			<tr>
+			  <td id="popupTableName">QUANTITY</TD>
+			  <td ><input id="popupQuantity" type=text value="1" onchange="onChangeCostItems()" /></td>
+			</tr>
+			<tr>
+			  <td id="popupTableName">UNIT PRICE</TD>
+			  <td >$<input id="popupUnitPrice" type=text value=1.50 onchange="onChangeCostItems()" /></td>
+			</tr>
+			<tr>
+			  <td id="popupTableName">BUFFER</TD>
+			  <td ><input id="popupBuffer" type=text value=1.00 onchange="onChangeCostItems()" /></td>
+			</tr>
+			<tr>
+			  <td id="popupTableName">PRICE</TD>
+			  <td id="popupPrice"><B>$ 23.65</B></td>
+			</tr>                     
+		</table>
+	</div>
+		<div id="main-loading">
+
+			<!-- This is section you can modify to customize the loading page -->
+			<div id="app-loading">
+				<div class="app-name">
+					<span style="color:white"></span>
+				</div>
+				<div class="loading-info">
+					<div id="main-loading-bar" class="loading"></div>
+				</div>
+			</div>
+			<!-- //////////////////    END    ////////////////////////////// -->
+			<div id="ie-note" style="display:none;">
+        <div class="hint-title">Error</div>
+        <div class="hint-img">Your browser is currently not supported.</div>
+        <p class="hint-text">
+          <span>
+            Please note that creating presentations is not supported in Internet Explorer versions 6, 7.
+          </span>
+          <br>
+          <span>
+            We recommend upgrading to the latest Internet Explorer, Google Chrome, or Firefox.
+          </span>
+          <br>
+          <span>
+            If you are using IE 8 or later, make sure you turn off "Compatibility View".
+          </span>
+        </p>
+      </div>
+		</div>
+		<div id="main-page">
+			<div id="jimu-layout-manager"></div>
+		</div>		
+
+		<script src="env.js"></script>
+		<script type="text/javascript" src="simpleLoader.js"></script>
+		<script type="text/javascript" src="init.js"></script>
+	</body>
+</html>

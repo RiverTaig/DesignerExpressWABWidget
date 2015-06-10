@@ -1,0 +1,59 @@
+.jimu-main-bgcolor {
+    background-color: #009b3e;
+}
+.jimu-widget-designerExpress .esriAttributeInspector .atiField{
+  width: 220px;
+}
+.jimu-widget-designerExpress .buttonSave{
+  margin-left: 50px;
+  margin-top: 0px;
+}
+.jimu-widget-designerExpress .esriAttributeInspector .atiLayerName{
+  font-size: 16px;
+}
+.jimu-widget-designerExpress .dojoxGridRowTable{
+  width: 300px;
+}
+
+.jimu-widget-designerExpress .templatePicker .grid .groupLabel{
+  font-size: 12px;
+}
+#dxFeatureList {
+  background-color: #FFFFFF;
+  height: auto;
+  max-height: 300px;
+  overflow: auto;
+}
+.CostItemLibraryButtonRight {
+    left: 230px;
+    padding: 10px;
+    position: unset;
+    margin-top: 50px;
+}
+.CostItemLibraryButtonLeft {
+    left: 30px;
+    padding: 10px;
+    position: unset;
+    margin-top: 50px;
+}
+.FilterWrapper select, .FilterWrapper input {
+    left: 60px;
+    padding-top: 0;
+    position: absolute;
+}
+
+.FilterWrapper {
+    color: #555555;
+    font-size: 12px;
+    font-family: tahoma;
+}
+.jimu-widget-designerExpress .dojoxGridScrollbox{
+  overflow-x: hidden;
+}
+#esri_dijit_editing_TemplatePicker_0, #dojox_grid_DataGrid_0, .dojoxGridScrollbox {
+	height: 590px !important;
+}
+.esriPopup .titlePane {
+    background-color: #009B3E;
+    border-color: #2FB4E9;
+}

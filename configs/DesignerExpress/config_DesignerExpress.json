@@ -1,0 +1,447 @@
+{
+  "editor": {
+    "enableUndoRedo": true,
+    "toolbarVisible": true,
+    "toolbarOptions": {
+      "mergeVisible": true,
+      "cutVisible": true,
+      "reshapeVisible": true
+    },
+    "layerInfos": [
+      {
+        "featureLayer": {
+          "url": "http://naismith:6080/arcgis/rest/services/ArcFM/SEElectricExpress/FeatureServer/1"
+        },
+        "disableGeometryUpdate": false,
+        "fieldInfos": [
+          {
+            "fieldName": "OBJECTID",
+            "label": "OBJECTID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "SUBTYPE",
+            "label": "Subtype",
+            "isEditable": true
+          },
+          {
+            "fieldName": "RATEDKVA",
+            "label": "Rated KVA",
+            "isEditable": true
+          },
+          {
+            "fieldName": "WORKFUNCTION",
+            "label": "WORKFUNCTION",
+            "isEditable": true
+          },
+          {
+            "fieldName": "DESIGNID",
+            "label": "DESIGNID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "GlobalID",
+            "label": "GlobalID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "PALETTEITEM",
+            "label": "PALETTEITEM",
+            "isEditable": true
+          },
+          {
+            "fieldName": "REMOTEDESIGNID",
+            "label": "REMOTEDESIGNID",
+            "isEditable": true
+          }
+        ]
+      },
+      {
+        "featureLayer": {
+          "url": "http://naismith:6080/arcgis/rest/services/ArcFM/SEElectricExpress/FeatureServer/2"
+        },
+        "disableGeometryUpdate": false,
+        "fieldInfos": [
+          {
+            "fieldName": "OBJECTID",
+            "label": "OBJECTID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "SUBTYPE",
+            "label": "Subtype",
+            "isEditable": true
+          },
+          {
+            "fieldName": "NORMALPOSITION_A",
+            "label": "Normal Position A",
+            "isEditable": true
+          },
+          {
+            "fieldName": "NORMALPOSITION_B",
+            "label": "Normal Position B",
+            "isEditable": true
+          },
+          {
+            "fieldName": "NORMALPOSITION_C",
+            "label": "Normal Position C",
+            "isEditable": true
+          },
+          {
+            "fieldName": "WORKFUNCTION",
+            "label": "WORKFUNCTION",
+            "isEditable": true
+          },
+          {
+            "fieldName": "DESIGNID",
+            "label": "DESIGNID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "GlobalID",
+            "label": "GlobalID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "PALETTEITEM",
+            "label": "PALETTEITEM",
+            "isEditable": true
+          },
+          {
+            "fieldName": "REMOTEDESIGNID",
+            "label": "REMOTEDESIGNID",
+            "isEditable": true
+          }
+        ]
+      },
+      {
+        "featureLayer": {
+          "url": "http://naismith:6080/arcgis/rest/services/ArcFM/SEElectricExpress/FeatureServer/4"
+        },
+        "disableGeometryUpdate": false,
+        "fieldInfos": [
+          {
+            "fieldName": "OBJECTID",
+            "label": "OBJECTID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "SUBTYPE",
+            "label": "Subtype",
+            "isEditable": true
+          },
+          {
+            "fieldName": "WORKFUNCTION",
+            "label": "WORKFUNCTION",
+            "isEditable": true
+          },
+          {
+            "fieldName": "DESIGNID",
+            "label": "DESIGNID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "GlobalID",
+            "label": "GlobalID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "PALETTEITEM",
+            "label": "PALETTEITEM",
+            "isEditable": true
+          },
+          {
+            "fieldName": "REMOTEDESIGNID",
+            "label": "REMOTEDESIGNID",
+            "isEditable": true
+          }
+        ]
+      },
+      {
+        "featureLayer": {
+          "url": "http://naismith:6080/arcgis/rest/services/ArcFM/SEElectricExpress/FeatureServer/5"
+        },
+        "disableGeometryUpdate": false,
+        "fieldInfos": [
+          {
+            "fieldName": "OBJECTID",
+            "label": "OBJECTID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "SUBTYPE",
+            "label": "Subtype",
+            "isEditable": true
+          },
+          {
+            "fieldName": "NEUTRALCLASS",
+            "label": "Neutral Class",
+            "isEditable": true
+          },
+          {
+            "fieldName": "NEUTRALMATERIAL",
+            "label": "Neutral Material",
+            "isEditable": true
+          },
+          {
+            "fieldName": "WORKFUNCTION",
+            "label": "WORKFUNCTION",
+            "isEditable": true
+          },
+          {
+            "fieldName": "DESIGNID",
+            "label": "DESIGNID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "GlobalID",
+            "label": "GlobalID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "PALETTEITEM",
+            "label": "PALETTEITEM",
+            "isEditable": true
+          },
+          {
+            "fieldName": "REMOTEDESIGNID",
+            "label": "REMOTEDESIGNID",
+            "isEditable": true
+          }
+        ]
+      },
+      {
+        "featureLayer": {
+          "url": "http://naismith:6080/arcgis/rest/services/ArcFM/SEElectricExpress/FeatureServer/6"
+        },
+        "disableGeometryUpdate": false,
+        "fieldInfos": [
+          {
+            "fieldName": "OBJECTID",
+            "label": "OBJECTID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "SUBTYPE",
+            "label": "Subtype",
+            "isEditable": true
+          },
+          {
+            "fieldName": "NEUTRALCLASS",
+            "label": "Neutral Class",
+            "isEditable": true
+          },
+          {
+            "fieldName": "NEUTRALMATERIAL",
+            "label": "Neutral Material",
+            "isEditable": true
+          },
+          {
+            "fieldName": "WORKFUNCTION",
+            "label": "WORKFUNCTION",
+            "isEditable": true
+          },
+          {
+            "fieldName": "DESIGNID",
+            "label": "DESIGNID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "GlobalID",
+            "label": "GlobalID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "PALETTEITEM",
+            "label": "PALETTEITEM",
+            "isEditable": true
+          },
+          {
+            "fieldName": "REMOTEDESIGNID",
+            "label": "REMOTEDESIGNID",
+            "isEditable": true
+          }
+        ]
+      },
+      {
+        "featureLayer": {
+          "url": "http://naismith:6080/arcgis/rest/services/ArcFM/SEElectricExpress/FeatureServer/7"
+        },
+        "disableGeometryUpdate": false,
+        "fieldInfos": [
+          {
+            "fieldName": "OBJECTID",
+            "label": "OBJECTID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "SUBTYPE",
+            "label": "Subtype",
+            "isEditable": true
+          },
+          {
+            "fieldName": "NEUTRALCLASS",
+            "label": "Neutral Class",
+            "isEditable": true
+          },
+          {
+            "fieldName": "NEUTRALMATERIAL",
+            "label": "Neutral Material",
+            "isEditable": true
+          },
+          {
+            "fieldName": "WORKFUNCTION",
+            "label": "WORKFUNCTION",
+            "isEditable": true
+          },
+          {
+            "fieldName": "DESIGNID",
+            "label": "DESIGNID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "GlobalID",
+            "label": "GlobalID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "PALETTEITEM",
+            "label": "PALETTEITEM",
+            "isEditable": true
+          },
+          {
+            "fieldName": "REMOTEDESIGNID",
+            "label": "REMOTEDESIGNID",
+            "isEditable": true
+          }
+        ]
+      },
+      {
+        "featureLayer": {
+          "url": "http://naismith:6080/arcgis/rest/services/ArcFM/SEElectricExpress/FeatureServer/8"
+        },
+        "disableGeometryUpdate": false,
+        "fieldInfos": [
+          {
+            "fieldName": "OBJECTID",
+            "label": "OBJECTID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "SUBTYPE",
+            "label": "Subtype",
+            "isEditable": true
+          },
+          {
+            "fieldName": "NEUTRALCLASS",
+            "label": "Neutral Class",
+            "isEditable": true
+          },
+          {
+            "fieldName": "NEUTRALMATERIAL",
+            "label": "Neutral Material",
+            "isEditable": true
+          },
+          {
+            "fieldName": "WORKFUNCTION",
+            "label": "WORKFUNCTION",
+            "isEditable": true
+          },
+          {
+            "fieldName": "DESIGNID",
+            "label": "DESIGNID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "GlobalID",
+            "label": "GlobalID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "PALETTEITEM",
+            "label": "PALETTEITEM",
+            "isEditable": true
+          },
+          {
+            "fieldName": "REMOTEDESIGNID",
+            "label": "REMOTEDESIGNID",
+            "isEditable": true
+          }
+        ]
+      },
+      {
+        "featureLayer": {
+          "url": "http://naismith:6080/arcgis/rest/services/ArcFM/SEElectricExpress/FeatureServer/9"
+        },
+        "disableGeometryUpdate": false,
+        "fieldInfos": [
+          {
+            "fieldName": "OBJECTID",
+            "label": "OBJECTID",
+            "isEditable": true
+          }
+        ]
+      },
+      {
+        "featureLayer": {
+          "url": "http://naismith:6080/arcgis/rest/services/ArcFM/SEElectricExpress/FeatureServer/0"
+        },
+        "disableGeometryUpdate": false,
+        "fieldInfos": [
+          {
+            "fieldName": "OBJECTID",
+            "label": "OBJECTID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "SUBTYPE",
+            "label": "Subtype",
+            "isEditable": true
+          },
+          {
+            "fieldName": "MATERIAL",
+            "label": "Material",
+            "isEditable": true
+          },
+          {
+            "fieldName": "CLASS",
+            "label": "Structure Class",
+            "isEditable": true
+          },
+          {
+            "fieldName": "HEIGHT",
+            "label": "Structure Height",
+            "isEditable": true
+          },
+          {
+            "fieldName": "WORKFUNCTION",
+            "label": "WORKFUNCTION",
+            "isEditable": true
+          },
+          {
+            "fieldName": "DESIGNID",
+            "label": "DESIGNID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "GlobalID",
+            "label": "GlobalID",
+            "isEditable": true
+          },
+          {
+            "fieldName": "PALETTEITEM",
+            "label": "PALETTEITEM",
+            "isEditable": true
+          },
+          {
+            "fieldName": "REMOTEDESIGNID",
+            "label": "REMOTEDESIGNID",
+            "isEditable": true
+          }
+        ]
+      }
+    ],
+    "userName": "Ryan",
+    "serviceURL": "http://naismith:6080/arcgis/rest/services/ArcFM/SEElectricExpress"
+  }
+}

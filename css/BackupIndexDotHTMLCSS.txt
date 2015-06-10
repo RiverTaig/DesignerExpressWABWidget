@@ -1,0 +1,97 @@
+		*{box-sizing: border-box;}
+			body,html {
+			  width:100%;
+			  height:100%;
+			  margin:0;
+			  padding:0;
+			  overflow:hidden;
+			}
+			#main-loading{
+				width: 100%;
+				height: 100%;
+				background-color: #518dca;
+				text-align: center;
+				overflow: hidden;
+			}
+			#main-loading #app-loading, #main-loading #ie-note{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      #main-loading #app-loading{
+        width: 100%;
+        height: 100px;
+      }
+      #main-loading .app-name{
+        font: 36px arial;
+        font-weight: bold;
+        position: absolute;
+        z-index: 2;
+      }
+			#main-loading img{
+				position: relative;
+				display: block;
+				margin: auto;
+			}
+			#main-loading .loading-info{
+				font: 14px 'arial';
+				margin-top: 50px;
+				overflow: hidden;
+				position: relative;
+			}
+			#main-loading .loading-info .loading{
+				width: 260px;
+				height: 4px;
+				border-radius: 2px;
+				background-color: #31659b;
+				margin: auto;
+			}
+			#main-loading .loading-info .loading-progress{
+				height: 4px;
+				border-radius: 2px;
+				background-color: white;
+			}
+			#main-loading #ie-note {
+        width: 586px;
+        height: 253px;
+        background-image: url('images/notes.png');
+        padding: 0 30px 40px 30px;
+        font-size: 14px;
+        color: #596679;
+      }
+      #ie-note .hint-title{
+        height: 40px;
+        line-height: 48px;
+        text-align: left;
+        font-weight: bold;
+      }
+      #ie-note .hint-img{
+        background-image: url('images/hint.png');
+        background-position: left;
+        padding-left: 40px;
+        margin-top: 20px;
+        background-repeat: no-repeat;
+        height: 30px;
+        text-align: left;
+        line-height: 30px;
+        font-weight: bold;
+      }
+      #ie-note span{
+        display: block;
+        line-height: 14px;
+      }
+			#main-page{
+				display: none;
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+
+			#jimu-layout-manager{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+			}

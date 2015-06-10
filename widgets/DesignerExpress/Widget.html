@@ -1,0 +1,72 @@
+<div style="width:100%; height:100%; min-width:380px;min-width:340px;">
+  <div>
+
+  <span style="display:block;width=100%;text-align:left;font-size:16px;font-weight: bold">Filter</span>
+  <span style="font-size:12px;font-weight: bold">
+    <!--
+    <br>  
+    <input name="gasOrElectric" id="radElectric" type="radio" checked="true" ><span style="margin-right: 10px"> Electric </span></input>
+    <input name="gasOrElectric" id="radGas" type="radio" ><span style="margin-right: 10px"> Gas</span></input>
+    <br>     
+    -->
+  	<span style="white-space:nowrap;margin-top:5px;display: inline-block">
+    <div class="FilterWrapper">
+  	<INPUT name="ppiortext" type="radio"  id="chkPaletteChooser" style="margin-right: 5px;display:none" checked="True">Palette: 
+    <select id="cboPaletteChooser" data-dojo-attach-event="onchange:cboPaletteChooser_Change" style="margin-right: 10px">
+  	  <option value="-"></option>
+  	</select>
+    </div>
+  	</INPUT>
+  	</span>	
+  	<br>
+  	<span style="margin-top: 5px;white-space:nowrap;display: inline-block">
+    <div class="FilterWrapper">
+  	<INPUT name="ppiortext" type="radio" id="chkPaletteItem" style="margin-right: 5px;display:none" >Item: 
+    	<select id="cboPaletteItemChooser" data-dojo-attach-event="onchange:cboPaletteItemChooser_Change" style="margin-right: 10px">
+    		<option value="SHOW ALL">SHOW ALL</option>
+    	</select>
+    </div>
+  	</span>		
+  	<br>
+  	<span style="white-space:nowrap;margin-top: 5px;margin-bottom: 10px;display: inline-block">
+  	<INPUT name="ppiortext"  type="radio"  id="chkDescriptionFilter" style="margin-right: 5px;display:none" ><span style="margin-right: 20px">
+    <div class="FilterWrapper">
+    Text: </span>
+  	<input type="text" id="txtDescriptionFilter" style="background-color:#FFFF66; width:240px" value="" data-dojo-attach-event="onkeyup:txtDescriptionFilter_Change"></div>
+  	</INPUT>
+  	</span>
+  	<BR>
+  	<BUTTON style="margin-bottom: 5px;display:none" type="button" data-dojo-attach-event="onclick:executeFilter">Apply Filter</BUTTON>
+  	<BUTTON style="margin-bottom: 5px;padding:5px" id="btnShowCostItems" onclick="ShowMeAPopup()" type="button" >Material Estimate...</BUTTON><br>
+    <span id="txtShowAllPaletteItems">Showing all palette items</span>
+    </span>
+  </span>
+  </div>
+  <div data-dojo-attach-point="editDiv" style="width:100%; height:100%"></div>
+  <div><!--
+  <script type="text/javascript">
+    var btnCostItem = $('#btnCostItem');
+    //alert("btn ID =  " + btn.id);
+    btnCostItem.click(function() {
+    $("#popupdiv").dialog({
+      open: function(event, ui){
+        //$("#popupQuantity").val(6); //TODO change to actual values for cost item
+        //$("#popupBuffer").val(7);//TODO change to actual values for cost item
+        //$("#popupUnitPrice").val(8);//TODO change to actual values for cost item
+        //onChangeCostItems();
+      },
+      title: "Cost Items for DX Feature!!",
+      width: 430,
+      height: 500,
+      modal: true,
+      buttons: {
+      Close: function() {
+      $(this).dialog('close');
+      }
+      }
+      });
+    }); 
+  </script> -->
+
+</div>
+
